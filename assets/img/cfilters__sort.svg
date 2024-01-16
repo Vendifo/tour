@@ -1,0 +1,11 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 974">
+<path id="Vector (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M0 2.125C0 1.50368 0.497461 1 1.11111 1H18.8889C19.5025 1 20 1.50368 20 2.125C20 2.74632 19.5025 3.25 18.8889 3.25H1.11111C0.497461 3.25 0 2.74632 0 2.125ZM0 10C0 9.37868 0.497461 8.875 1.11111 8.875H13.3333C13.947 8.875 14.4444 9.37868 14.4444 10C14.4444 10.6213 13.947 11.125 13.3333 11.125H1.11111C0.497461 11.125 0 10.6213 0 10ZM0 17.875C0 17.2537 0.497461 16.75 1.11111 16.75H7.77778C8.39143 16.75 8.88889 17.2537 8.88889 17.875C8.88889 18.4963 8.39143 19 7.77778 19H1.11111C0.497461 19 0 18.4963 0 17.875Z" fill="url(#paint0_linear_2_4996)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2_4996" x1="10" y1="1" x2="10" y2="19" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C2A97D"/>
+<stop offset="1" stop-color="#A67C46"/>
+</linearGradient>
+</defs>
+</svg>
