@@ -1954,6 +1954,8 @@ body {
         background-color: #fff;
     }
 
+    
+
     #rangeSliderPrice .noUi-connects::after {
         content: "";
         position: absolute;
