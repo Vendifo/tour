@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="./assets/css/fonts.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/tour__country.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="icon" href="./assets/img/Title.svg" type="image/svg">
+    <title>Kaiftur</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <img class="header__logo" src="assets/img/logo.svg" alt="">
+
+                        <div class="header__group">
+                            <a class="header__link" href="tel:+77073366665">+7 707 336-66-65</a>
+                            <button class="header__message">
+                                <img src="assets/img/message-icon.svg" alt="">
+                            </button>
+                            <button class="burger" id="burger">
+                                <span>burger</span>
+                            </button>
+                        </div>
+                    </div>
+                    <nav class="menu" id="menu">
+                        <a class="menu__link  active" href="./index.html">Главная</a>
+                        <a class="menu__link" href="./tour__country.html">Страна</a>
+                        <a class="menu__link" href="#">Пункт меню</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <section class="country__title">
+                <div class="container country__title__container">
+                    <h1 class="country__title__head">ЦЕНЫ НА ТУРЫ В <span>ОАЭ</span>
+                        ИЗ <span>АЛМАТЫ</span> 2023</h1>
+                    <div class="country__title__foot">
+                        <button>
+                            ПОДОБРАТЬ ТУР В ОАЭ
+                        </button>
+                        <p>Мы перезвоним и предложим вам выгодные туры</p>
+                    </div>
+                </div>
+            </section>
+            <section class="page__section-padding-s country__info">
+                <div class="container">
+                    <div class="cinfo__variants">
+                        <p class="cinfo__variants__item active">Туры</p>
+                        <p class="cinfo__variants__item">Регионы</p>
+                        <p class="cinfo__variants__item">Валюта</p>
+                        <p class="cinfo__variants__item">Виза</p>
+                        <p class="cinfo__variants__item">Экскурсии</p>
+                        <p class="cinfo__variants__item">О стране</p>
+                        <p class="cinfo__variants__item">Статьи</p>
+                    </div>
+                    <h2 class="cinfo__title__head"> <span>Туры в ОАЭ</span> от "КАЙФТУР"</h2>
+                    <div class="cinfo__content">
+                        <div>
+                            Наше турагентство предоставляет широкий выбор курортов и отелей в объединенные арабские
+                            эмираты. На нашем сайте вы найдете лучшие цены и предложения путевок в ОАЭ на 2023 год.
+                        </div>
+                        <p>Воспользуйтесь ниже фильтром указав:</p>
+                        <div class="cinfo__content__items">
+                            <div class="cinfo__content__item">
+                                <div class="cinfo__circle"></div>
+                                <p>Дату</p>
+                            </div>
+                            <p class="cinfo__content__item__not">
+                                Не обязательно:
+                            </p>
+                            <div class="cinfo__content__item">
+                                <div class="cinfo__circle"></div>
+                                <p>Бюджет</p>
+                            </div>
+
+                            <div class="cinfo__content__item">
+                                <div class="cinfo__circle"></div>
+                                <p>Бюджет</p>
+                            </div>
+
+                            <div class="cinfo__content__item">
+                                <div class="cinfo__circle"></div>
+                                <p>Кол-во звезд</p>
+                            </div>
+                            <div class="cinfo__content__item">
+                                <div class="cinfo__circle"></div>
+                                <p>Кол-во дней</p>
+                            </div>
+                        </div>
+                        <div class="cinfo__foot__disc">
+                            <span>И отсортируйте список туров</span> по - цене, - популярности или - оценкам. Так же
+                            можно смотреть
+                            список отелей по карте (если для вас важно близость к морю, важным местам или др)
+                        </div>
+                        <p class="cinfo__foot__link">Либо <a href="">оставьте заявку</a> и мы сделаем это за вас.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="page__section-padding-s country__filter">
+                <div class="container">
+
+                    <div class="cfilter__title">
+                        <img src="./assets/img/search_geo.svg" alt="">
+                        <label class="search-turs__group" for="town-select">
+                            Откуда:
+                            <select class="search-turs__town-select" name="" id="town-select">
+                                <option value="">Алматы</option>
+                                <option value="">Алматы</option>
+                                <option value="">Алматы</option>
+                            </select>
+                        </label>
+                    </div>
+                    <h3 class="cfilter__title__date__title">Укажите дату вылета</h3>
+
+                </div>
+                <div class="cfilter__dates " id="sliderContainer">
+
+                </div>
+                <div class="container">
+                    <div class="cfilter__name">
+                        <p class="cfilter__name__title">Найдено <span>2245</span> туров</p>
+
+                        <div>
+                            <img src="./assets/img/search_geo.svg" alt="">
+                            <a class="cfilter__link" href="">см. на карте</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="cfilter__info__item">
+                            <img src="./assets/img/zoom.svg" alt="">
+                            <input placeholder="Найти отель" type="text">
+                        </div>
+                    </div>
+                    <div class="cfilter__info__items">
+                        <div onclick="toggleMenu('menuFilter')" class="cfilter__info__item" id="filterMenu">
+                            <div class="cfilter__info__items__back"></div>
+                            <img src="./assets/img/filters.svg" alt="">
+                            <p id="filterMenuContent">Фильтр</p>
+                        </div>
+                        <div class="menuFilter" id="menuFilter">
+                            <div class="menuFilter__item">
+                                <div class="menuFilter__item__content">
+                                    <img id="filterImg1" class="menuFilter__item__checked" src="./assets/img/check-circle.svg" alt="">
+                                    <div>
+                                        <p onclick="openSubMenu('menuBudget')">Бюджет на ночь</p>
+                                        <p id="menuFilter__undertext1">Любой</p>
+                                    </div>
+                                </div>
+                                <img src="./assets/img/wallet2.svg" alt="">
+                            </div>
+                            <div class="menuFilter__item">
+                                <div class="menuFilter__item__content">
+                                    <img id="filterImg2" class="menuFilter__item__checked" src="./assets/img/check-circle.svg" alt="">
+                                    <div>
+                                        <p onclick="openSubMenu('menuRegion')">Регион</p>
+                                        <p id="menuFilter__undertext2">Любой</p>
+                                    </div>
+                                </div>
+                                <img src="./assets/img/search_geo.svg" alt="">
+                            </div>
+                            <div class="menuFilter__item">
+                                <div class="menuFilter__item__content">
+                                    <img id="filterImg3" class="menuFilter__item__checked" src="./assets/img/check-circle.svg" alt="">
+                                    <div>
+                                        <p onclick="openSubMenu('menuStars')">Количество звёзд</p>
+                                        <p id="menuFilter__undertext3">Любые</p>
+                                    </div>
+                                </div>
+                                <img src="./assets/img/star.svg" alt="">
+                            </div>
+                            <div class="menuFilter__item">
+                                <div class="menuFilter__item__content">
+                                    <img id="filterImg4" class="menuFilter__item__checked" src="./assets/img/check-circle.svg" alt="">
+                                    <div>
+                                        <p onclick="openSubMenu('menuFood')">Питание</p>
+                                        <p id="menuFilter__undertext4">Любое</p>
+                                    </div>
+                                </div>
+                                <img src="./assets/img/baranchik.svg" alt="">
+                            </div>
+                            <div class="menuFilter__item">
+                                <div class="menuFilter__item__content">
+                                    <img id="filterImg5" class="menuFilter__item__checked" src="./assets/img/check-circle.svg" alt="">
+                                    <div>
+                                        <p onclick="openSubMenu('menuDays')">Количество дней</p>
+                                        <p id="menuFilter__undertext5">Любое</p>
+                                    </div>
+                                </div>
+                                <img src="./assets/img/calendar-week.svg" alt="">
+                            </div>
+                            <button onclick="applyFilters()">Применить</button>
+                        </div>
+
+                        <!-- Подменю 1: budget -->
+                        <div class="submenu submenuBudget" id="menuBudget">
+                            <div class="submenu__back">
+                                <img src="./assets/img/country/backspace.svg" alt="">
+                                <p onclick="closeSubMenu('menuBudget', 'filterImg1', 'menuFilter__undertext1')">Вернуться назад</p>
+                            </div>
+                            <div class="submenuList">
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="budget1" class="checkbox">
+                                    <label for="budget1">от 20 000</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="budget2" class="checkbox">
+                                    <label for="budget2">20 000 - 30 000</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="budget3" class="checkbox">
+                                    <label for="budget3">30 000 - 50 000</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="budget4" class="checkbox">
+                                    <label for="budget4">50 000 - 70 000</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="budget5" class="checkbox">
+                                    <label for="budget5">70 000 - 90 000</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="budget6" class="checkbox">
+                                    <label for="budget6">от 90 000</label>
+                                </div>
+                            </div>
+                            <button onclick="reopenSubMenu('menuRegion', 'menuBudget', 'filterImg1', 'menuFilter__undertext1')">Далее</button>
+                        </div>
+
+                        <!-- Подменю 2: Регион -->
+                        <div class="submenu" id="menuRegion">
+                            <div class="submenu__back">
+                                <img src="./assets/img/country/backspace.svg" alt="">
+                                <p onclick="closeSubMenu('menuRegion', 'filterImg2', 'menuFilter__undertext2')">Вернуться назад</p>
+                            </div>
+                            <div class="submenuList">
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="region1" class="checkbox">
+                                    <label for="region1">Турция</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="region2" class="checkbox">
+                                    <label for="region2">ОАЭ</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="region3" class="checkbox">
+                                    <label for="region3">Египет</label>
+                                </div>
+
+                            </div>
+                            <button onclick="reopenSubMenu('menuStars', 'menuRegion','filterImg2', 'menuFilter__undertext2')">Далее</button>
+                        </div>
+
+                        <!-- Подменю 3: Количество звёзд -->
+                        <div class="submenu" id="menuStars">
+                            <div class="submenu__back">
+                                <img src="./assets/img/country/backspace.svg" alt="">
+                                <p onclick="closeSubMenu('menuStars' , 'filterImg3', 'menuFilter__undertext3')">Вернуться назад</p>
+                            </div>
+                            <div class="submenuList">
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="stars1" class="checkbox">
+                                    <label for="stars1">APART</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="stars2" class="checkbox">
+                                    <label for="stars2">1 звезда</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="stars3" class="checkbox">
+                                    <label for="stars3">2 звезды</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="stars4" class="checkbox">
+                                    <label for="stars4">3 звезды</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="stars5" class="checkbox">
+                                    <label for="stars5">4 звезды</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="stars6" class="checkbox">
+                                    <label for="stars6">5 звёзд</label>
+                                </div>
+
+                            </div>
+                            <button onclick="reopenSubMenu('menuFood', 'menuStars' , 'filterImg3', 'menuFilter__undertext3')">Далее</button>
+                        </div>
+
+                        <!-- Подменю 4: Питание -->
+                        <div class="submenu" id="menuFood">
+                            <div class="submenu__back">
+                                <img src="./assets/img/country/backspace.svg" alt="">
+                                <p onclick="closeSubMenu('menuFood' , 'filterImg4', 'menuFilter__undertext4')">Вернуться назад</p>
+                            </div>
+                            <div class="submenuList">
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="food1" class="checkbox">
+                                    <label for="food1">Завтрак</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="food2" class="checkbox">
+                                    <label for="food2">Полупансион</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="food3" class="checkbox">
+                                    <label for="food3">Полный пансион</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="food4" class="checkbox">
+                                    <label for="food4">Все включено</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="food5" class="checkbox">
+                                    <label for="food5">Ультра всё включено</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="food6" class="checkbox">
+                                    <label for="food6">Без питания</label>
+                                </div>
+
+                            </div>
+                            <button onclick="reopenSubMenu('menuDays', 'menuFood' , 'filterImg4', 'menuFilter__undertext4')">Далее</button>
+                        </div>
+
+                        <!-- Подменю 5: Количество дней -->
+                        <div class="submenu" id="menuDays">
+                            <div class="submenu__back">
+                                <img src="./assets/img/country/backspace.svg" alt="">
+                                <p onclick="closeSubMenu('menuDays', 'filterImg5', 'menuFilter__undertext5')">Вернуться назад</p>
+                            </div>
+                            <div class="submenuList">
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days1" class="checkbox">
+                                    <label for="days1">1 день</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days2" class="checkbox">
+                                    <label for="days2">2 дня</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days3" class="checkbox">
+                                    <label for="days3">3 дня</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days4" class="checkbox">
+                                    <label for="days4">4 дня</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days5" class="checkbox">
+                                    <label for="days5">5 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days6" class="checkbox">
+                                    <label for="days6">6 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days7" class="checkbox">
+                                    <label for="days7">7 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days8" class="checkbox">
+                                    <label for="days8">8 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days9" class="checkbox">
+                                    <label for="days9">9 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days10" class="checkbox">
+                                    <label for="days10">10 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days11" class="checkbox">
+                                    <label for="days11">11 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days12" class="checkbox">
+                                    <label for="days12">12 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days13" class="checkbox">
+                                    <label for="days13">13 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days14" class="checkbox">
+                                    <label for="days14">14 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days15" class="checkbox">
+                                    <label for="days15">15 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days16" class="checkbox">
+                                    <label for="days16">16 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days17" class="checkbox">
+                                    <label for="days17">17 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days18" class="checkbox">
+                                    <label for="days18">18 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days19" class="checkbox">
+                                    <label for="days19">19 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days20" class="checkbox">
+                                    <label for="days20">20 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days21" class="checkbox">
+                                    <label for="days21">21 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days22" class="checkbox">
+                                    <label for="days22">22 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days23" class="checkbox">
+                                    <label for="days23">23 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days24" class="checkbox">
+                                    <label for="days24">24 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days25" class="checkbox">
+                                    <label for="days25">25 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days26" class="checkbox">
+                                    <label for="days26">26 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days27" class="checkbox">
+                                    <label for="days27">27 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days28" class="checkbox">
+                                    <label for="days28">28 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days29" class="checkbox">
+                                    <label for="days29">29 дней</label>
+                                </div>
+
+                                <div class="submenuItem">
+                                    <input type="checkbox" id="days30" class="checkbox">
+                                    <label for="days30">больше 30 дней</label>
+                                </div>
+
+                                
+
+                            </div>
+                            <button class="btn__high__font" onclick="closeSubMenu('menuDays' , 'filterImg5', 'menuFilter__undertext5')">Далее</button>
+                        </div>
+
+                        <!--========================= Сортировка====================== -->
+
+                        <div id="sortMenuTrigger" class="cfilter__info__item">
+                            <div class="cfilter__info__items__back1"></div>
+                            <img src="./assets/img/cfilters__sort.svg" alt="">
+                            <p id="sortMenuText">Сортировка</p>
+                        </div>
+
+                        <div id="sortMenu" class="sort-menu">
+                            <div class="menu-item" data-action="back">&lt; Вернуться назад</div>
+                            <div class="menu-item" data-action="popularity">По популярности</div>
+                            <div class="menu-item" data-action="expensive">Сначала дороже</div>
+                            <div class="menu-item" data-action="cheap">Сначала дешевле</div>
+                            <div class="menu-item" data-action="rating">По оценкам</div>
+                        </div>
+                    </div>
+                    <h3 class="cfilter__mid__title">Обычно включено</h3>
+                    <div class="tour__items cfilter__tour">
+
+                        <div class="tour__item">
+                            <img class="tour__icon" src="./assets/img/tour/plan.svg" alt="">
+                            <div class="tour__description">Перелет</div>
+                        </div>
+                        <div class="tour__item">
+                            <img class="tour__icon" src="./assets/img/tour__trans.svg" alt="">
+                            <div class="tour__description">Трансфер</div>
+                        </div>
+                        <div class="tour__item">
+                            <img class="tour__icon" src="./assets/img/tour/eat.svg" alt="">
+                            <div class="tour__description">Питание</div>
+                        </div>
+                        <div class="tour__item">
+                            <img class="tour__icon" src="./assets/img/tour/homes.svg" alt="">
+                            <div class="tour__description">Проживание</div>
+                        </div>
+                    </div>
+                    <div class="cfilter__items">
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="cfilter__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="cfilter__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                        <div class="cfilter__nums">
+                                            <img src="./assets/img/people.svg" alt="">
+                                            на 1 человека
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="cfilter__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="cfilter__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                        <div class="cfilter__nums">
+                                            <img src="./assets/img/people.svg" alt="">
+                                            на 1 человека
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="cfilter__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="cfilter__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                        <div class="cfilter__nums">
+                                            <img src="./assets/img/people.svg" alt="">
+                                            на 1 человека
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="cfilters__items__pagination">
+                        <img src="./assets/img/country/pagination.svg" alt="">
+                        <div class="cfilters__items__pages">
+                            <p class="active">1</p>
+                            <p>2</p>
+                            <p>3</p>
+                            <p>4</p>
+                            <p>5</p>
+                            <p>6</p>
+                        </div>
+                        <img class="rotate" src="./assets/img/country/pagination.svg" alt="">
+                    </div>
+                </div>
+            </section>
+            <section class="page__section-padding-s country__hot">
+                <div class="container">
+                    <div class="chot__title">
+                        <h2 class="section-title tour__title"> <span>Горящие туры</span> в ОАЭ</h2>
+                        <button>Все туры</button>
+                    </div>
+                    <div class="chot__slider">
+                        <div class="chot__item">
+                            <img src="./assets/img/country/chot.svg" alt="">
+                            <div class="chot__item__disc">
+                                <p>ОАЭ из Астаны. Горящие туры на вылет
+                                    с 24 февраля по 31 марта</p>
+                                <div class="chot__item__func">
+                                    <div class="chot__item__func__disc">
+                                        <h1>от 122 062 тг</h1>
+                                        <p>за 1 человека</p>
+                                    </div>
+                                    <button>ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chot__item">
+                            <img src="./assets/img/country/chot.svg" alt="">
+                            <div class="chot__item__disc">
+                                <p>ОАЭ из Астаны. Горящие туры на вылет
+                                    с 24 февраля по 31 марта</p>
+                                <div class="chot__item__func">
+                                    <div class="chot__item__func__disc">
+                                        <h1>от 122 062 тг</h1>
+                                        <p>за 1 человека</p>
+                                    </div>
+                                    <button>ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chot__item">
+                            <img src="./assets/img/country/chot.svg" alt="">
+                            <div class="chot__item__disc">
+                                <p>ОАЭ из Астаны. Горящие туры на вылет
+                                    с 24 февраля по 31 марта</p>
+                                <div class="chot__item__func">
+                                    <div class="chot__item__func__disc">
+                                        <h1>от 122 062 тг</h1>
+                                        <p>за 1 человека</p>
+                                    </div>
+                                    <button>ПОДРОБНЕЕ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="page__section-padding-s country__famous">
+                <div class="container">
+                    <h2 class="section-title tour__title"> <span>ПоПУЛЯРНЫЕ КУРОРТЫ</span> в ОАЭ</h2>
+                    <div class="cfamous__items">
+                        <div class="cfamous__item">
+                            <img class="offer__img" src="https://via.placeholder.com/330x166" alt="">
+                            <div class="cfamous__item__disc">
+                                <h1>Аджман</h1>
+                                <p>из Алматы</p>
+                                <p class="cfamous__item__disc__price">от 115 455 тг</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cfamous__items">
+                        <div class="cfamous__item">
+                            <img class="offer__img" src="https://via.placeholder.com/330x166" alt="">
+                            <div class="cfamous__item__disc">
+                                <h1>Джумейра</h1>
+                                <p>из Алматы</p>
+                                <p class="cfamous__item__disc__price">от 115 455 тг</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cfamous__items">
+                        <div class="cfamous__item">
+                            <img class="offer__img" src="https://via.placeholder.com/330x166" alt="">
+                            <div class="cfamous__item__disc">
+                                <h1>Аджман</h1>
+                                <p>из Алматы</p>
+                                <p class="cfamous__item__disc__price">от 115 455 тг</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="page__section-padding-s  push-contact">
+                <div class="container">
+
+                    <div class="push-contact__inner">
+                        <div class="push-contact__header">
+                            <h4 class="push-contact__title">НЕ МОЖЕШЬ ОПРЕДЕЛИТСЯ
+                                С ТУРОМ?</h4>
+                            <div class="push-contact__sub-title">Оставьте заявку и мы вам поможем</div>
+                        </div>
+
+                        <form class="push-contact__form" action="" method="dialog">
+                            <input class="push-contact__input" type="text" id="phoneInput2"
+                                placeholder="+7 (___) ___ __ __">
+
+                            <button class="push-contact__btn  btn  btn--border">Жду звонка</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <section class="page__section-padding-s country__reviews">
+                <div class="container">
+                    <h2 class="section-title tour__title country_rev__title"> <span>Отзывы наших клиентов</span> из ОАЭ
+                    </h2>
+                    <div class="creviews__slider">
+                        <div class="creviews__item">
+                            <div class="creviews__item__head">
+                                <img src="./assets/img/country/rev.svg" alt="">
+                                <div class="creviews__item__head__disc">
+                                    <p class="creviews__item__head__disc1">Альмира</p>
+                                    <div class="creviews__item__head__text">
+                                        <p>Дубай</p>
+                                        <div class="creviews__circle"></div>
+                                        <p>Риксос отель</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="creviews__item__disc">
+                                Спасибо за тур все понравилось. Прилетели нас встретили. Не знали английский нам помогли
+                            </div>
+                        </div>
+                        <div class="creviews__item">
+                            <div class="creviews__item__head">
+                                <img src="./assets/img/country/rev.svg" alt="">
+                                <div class="creviews__item__head__disc">
+                                    <p class="creviews__item__head__disc1">Альмира</p>
+                                    <div class="creviews__item__head__text">
+                                        <p>Дубай</p>
+                                        <div class="creviews__circle"></div>
+                                        <p>Риксос отель</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="creviews__item__disc">
+                                Спасибо за тур все понравилось. Прилетели нас встретили. Не знали английский нам помогли
+                            </div>
+                        </div>
+                        <div class="creviews__item">
+                            <div class="creviews__item__head">
+                                <img src="./assets/img/country/rev.svg" alt="">
+                                <div class="creviews__item__head__disc">
+                                    <p class="creviews__item__head__disc1">Альмира</p>
+                                    <div class="creviews__item__head__text">
+                                        <p>Дубай</p>
+                                        <div class="creviews__circle"></div>
+                                        <p>Риксос отель</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="creviews__item__disc">
+                                Спасибо за тур все понравилось. Прилетели нас встретили. Не знали английский нам помогли
+                            </div>
+                        </div>
+                        <div class="creviews__item">
+                            <div class="creviews__item__head">
+                                <img src="./assets/img/country/rev.svg" alt="">
+                                <div class="creviews__item__head__disc">
+                                    <p class="creviews__item__head__disc1">Альмира</p>
+                                    <div class="creviews__item__head__text">
+                                        <p>Дубай</p>
+                                        <div class="creviews__circle"></div>
+                                        <p>Риксос отель</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="creviews__item__disc">
+                                Спасибо за тур все понравилось. Прилетели нас встретили. Не знали английский нам помогли
+                            </div>
+                        </div>
+                        <div class="creviews__item">
+                            <div class="creviews__item__head">
+                                <img src="./assets/img/country/rev.svg" alt="">
+                                <div class="creviews__item__head__disc">
+                                    <p class="creviews__item__head__disc1">Альмира</p>
+                                    <div class="creviews__item__head__text">
+                                        <p>Дубай</p>
+                                        <div class="creviews__circle"></div>
+                                        <p>Риксос отель</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="creviews__item__disc">
+                                Спасибо за тур все понравилось. Прилетели нас встретили. Не знали английский нам помогли
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar2">
+                        <div class="progress-indicator"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer__inner">
+                    <div class="copyright">
+                        &#169; 2023 "КАЙФТУР" Все права защищены законодательством РК. ТОО "...". БИН 123456789012
+                    </div>
+                    <div class="footer__contact">
+                        <ul class="socials">
+                            <li class="socials__item">
+
+                            </li>
+                            <li class="socials__item">
+
+                            </li>
+                            <li class="socials__item">
+
+                            </li>
+                        </ul>
+
+                        <div class="footer__group">
+                            <a class="footer__contact-link  footer__contact-link--bold" href="tel:+77073366665">
+                                <span class="text-mid">+7 (707) 336-66-65</span>
+                            </a>
+                            <a class="footer__contact-link" href="mailto:info@lakuhni.kz">info@lakuhni.kz</a>
+                        </div>
+                    </div>
+                    <div class="footer__list">
+                        <ul>О нас
+                            <li><a href="#">СМИ о нас</a></li>
+                            <li><a href="#">Награды</a> </li>
+                            <li><a href="#">Команда</a> </li>
+                            <li><a href="#">Вакансии</a> </li>
+                            <li><a href="#">Партнеры</a> </li>
+                            <li><a href="#">FAQ</a> </li>
+                            <li><a href="#">Карта сайта</a></li>
+                        </ul>
+                        <ul>Туристам
+                            <li><a href="#">Способы оплаты</a></li>
+                            <li><a href="#">Туры в кредит</a></li>
+                            <li><a href="#">Страхование</a></li>
+                            <li><a href="#">Подарочные сертификаты</a></li>
+                            <li><a href="#">Бонусная программа</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="./assets/js/libs/jquery-3.6.3.min.js"></script>
+    <script src="./assets/js/libs/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <script src="./assets/js/libs/nouislider.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="./assets/js/tour__country.js"></script>
+</body>
+
+</html>

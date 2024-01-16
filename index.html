@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Style -->
+    <link href="./assets/css/fonts.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/nouislider.css" rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="icon" href="./assets/img/Title.svg" type="image/svg">
+    <!-- ----- -->
+
+    <title>Kaiftur</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <div class="header__top">
+                        <img class="header__logo" src="assets/img/logo.svg" alt="">
+
+                        <div class="header__group">
+                            <a class="header__link" href="tel:+77073366665">+7 707 336-66-65</a>
+                            <button class="header__message">
+                                <img src="assets/img/message-icon.svg" alt="">
+                            </button>
+                            <button class="burger" id="burger">
+                                <span>burger</span>
+                            </button>
+                        </div>
+                    </div>
+                    <nav class="menu" id="menu">
+                        <a class="menu__link  active" href="#">Главная</a>
+                        <a class="menu__link" href="./tour__country.html">Страна</a>
+                        <a class="menu__link" href="#">Пункт меню</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="page">
+            <section class="intro">
+                <div class="container">
+                    <div class="intro__inner">
+                        <img class="intro__img" src="assets/img/intro/bg.jpg" alt="">
+                        <div class="intro__header">
+                            <h1 class="intro__title  section-title">Подберем туры мечты</h1>
+                            <div class="intro__subtitle">По ценам от всех туроператоров</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="search-turs">
+                <div class="container">
+                    <div class="search-turs__form">
+                        <label class="search-turs__group" for="town-select">
+                            Вылет из:
+                            <select class="search-turs__town-select" name="" id="town-select">
+                                <option value="">Алматы</option>
+                                <option value="">Алматы</option>
+                                <option value="">Алматы</option>
+                            </select>
+                        </label>
+
+                        <div class="search-turs__var">
+                            <img src="./assets/img/search_geo.svg" alt="">
+                            <div class="search-turs__var__func">
+                                <p>Куда</p>
+                                <div class="custom-select">
+                                    <input class="search-turs__input" type="text" placeholder="Выберите">
+                                    <ul class="suggestions-list" id="suggestions-list">
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-turs__var">
+                            <img src="./assets/img/calendar-week.svg" alt="">
+                            <div class="search-turs__var__func">
+                                <p class="search-turs__var__func__dates">Период вылета</p>
+                                <div class="search-turs__var__func__cal">
+                                    <div class="calendar">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="search-turs__var">
+                            <img src="./assets/img/moon.svg" alt="">
+                            <div class="search-turs__var__func">
+                                <div class="search-turs__var__func__nights">
+                                    <p>Кол-во ночей</p>
+                                    <p id="nights">4-8 ночей</p>
+                                </div>
+                                <div id="rangeSlider"></div>
+                            </div>
+                        </div>
+
+                        <div class="search-turs__var people__var ">
+                            <img src="./assets/img/person.svg" alt="">
+                            <div class="search-turs__var__func people__func">
+                                <p>Кол-во человек</p>
+                                <div class="search-turs__var__func__muchpeople" onclick="togglePeople()">
+                                    <p id="textPeople">1 взрослый </p><span id="textChildren">, без детей</span>
+                                </div>
+                                <div class="search-turs__var__func__menu ">
+                                    <div>
+                                        <div class="search-turs__var__func__menu__people">
+                                            <button id="decrementBtn">-</button>
+                                            <p id="varPeople">1 <span>взрослых</span></p>
+                                            <button id="incrementBtn">+</button>
+                                        </div>
+                                        <div class="search-turs__var__func__menu__chil">
+                                            <div id="optionsContainer">
+                                            </div>
+                                            <select class="children" name="" id="childrenSelect">
+                                                <option value="">Добавить ребёнка</option>
+                                                <option value="2">до 2 лет</option>
+                                                <option value="3">2 года</option>
+                                                <option value="4">3 года</option>
+                                                <option value="5">4 года</option>
+                                                <option value="6">5 лет</option>
+                                                <option value="7">6 лет</option>
+                                                <option value="8">7 лет</option>
+                                                <option value="9">8 лет</option>
+                                                <option value="10">9 лет</option>
+                                                <option value="11">10 лет</option>
+                                                <option value="12">11 лет</option>
+                                                <option value="13">12 лет</option>
+                                                <option value="14">13 лет</option>
+                                            </select>
+                                        </div>
+                                        <div id="selectedOptionContainer"></div>
+                                    </div>
+                                    <p id="closePeopleMenu">&#10006;</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="search-turs__hide">
+                            <div class="search-turs__var gotPrice">
+                                <img src="./assets/img/wallet2.svg" alt="">
+                                <div class="search-turs__var__func" id="priceToggle">
+                                    <p onclick="togglePrice()">Цена</p>
+                                    <p id="selectedPricesCount" onclick="togglePrice()">Указать цену</p>
+                                    <div class="search__price" id="priceDrop">
+                                        <div class="search__price__item">
+                                            <div>
+                                                <input type="checkbox" id="priceCheckbox5000" value="5000">
+                                                <label for="priceCheckbox5000">5000 тг</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="priceCheckbox10000" value="5000">
+                                                <label for="priceCheckbox10000">10000 тг</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="priceCheckbox20000" value="5000">
+                                                <label for="priceCheckbox20000">20000 тг</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="priceCheckbox30000" value="5000">
+                                                <label for="priceCheckbox30000">30000 тг</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="priceCheckbox50000" value="5000">
+                                                <label for="priceCheckbox50000">50000 тг</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="priceCheckbox100000" value="5000">
+                                                <label for="priceCheckbox100000">100000 тг</label>
+                                            </div>
+                                            <div>
+                                                <input type="checkbox" id="priceCheckboxMore" value="5000">
+                                                <label for="priceCheckboxMore">>100000 тг</label>
+                                            </div>
+                                        </div>
+                                        <p id="closePriceMenu">&#10006;</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="search-turs__var">
+                                <img src="./assets/img/star.svg" alt="">
+                                <div class="search-turs__var__func">
+                                    <p id="muchsStars" onclick="toggleStar()">Категория отеля</p>
+                                    <p id="muchStar" onclick="toggleStar()">1-5 звёзд</p>
+
+                                    <div class="list__star" id="starCheckboxes">
+
+                                        <label><input type="checkbox" value="11" onclick="updateStarCount(this)">Любая
+                                            категория</label>
+                                        <label><input type="checkbox" value="2" onclick="updateStarCount(this)">1
+                                            звезда</label>
+                                        <label><input type="checkbox" value="3" onclick="updateStarCount(this)">2
+                                            звезды</label>
+                                        <label><input type="checkbox" value="4" onclick="updateStarCount(this)">3
+                                            звезды</label>
+                                        <label><input type="checkbox" value="5" onclick="updateStarCount(this)">4
+                                            звезды</label>
+                                        <label><input type="checkbox" value="6" onclick="updateStarCount(this)">5
+                                            звёзд</label>
+                                        <label><input type="checkbox" value="7"
+                                                onclick="updateStarCount(this)">HV-1</label>
+                                        <label><input type="checkbox" value="8"
+                                                onclick="updateStarCount(this)">HV-2</label>
+                                        <label><input type="checkbox" value="9"
+                                                onclick="updateStarCount(this)">APART</label>
+                                        <label><input type="checkbox" value="10"
+                                                onclick="updateStarCount(this)">Б\К</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-turs__var var__eat">
+                                <img src="./assets/img/baranchik.svg" alt="">
+                                <div class="search-turs__var__func" onclick="toggleDropdown()">
+                                    <p>Тип питания</p>
+                                    <p id="eat__value">Любой</p>
+                                    <div class="search__eat" id="dropdown">
+                                        <label><input class="search__check" type="checkbox" value="1"
+                                                onchange="updateSelection()"> Любое</label>
+                                        <label><input class="search__check" type="checkbox" value="2"
+                                                onchange="updateSelection()"> Завтрак</label>
+                                        <label><input class="search__check" type="checkbox" value="3"
+                                                onchange="updateSelection()"> Полупансион</label>
+                                        <label><input class="search__check" type="checkbox" value="4"
+                                                onchange="updateSelection()"> Полный пансион</label>
+                                        <label><input class="search__check" type="checkbox" value="5"
+                                                onchange="updateSelection()"> Все включено</label>
+                                        <label><input class="search__check" type="checkbox" value="6"
+                                                onchange="updateSelection()"> Ультра всё включено</label>
+                                        <label><input class="search__check" type="checkbox" value="7"
+                                                onchange="updateSelection()"> Без питания</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-turs__var" onclick="toggleDropdownRest()">
+                                <img src="./assets/img/palm.svg" alt="">
+                                <div class="search-turs__var__func">
+                                    <p>Тип отдыха</p>
+                                    <p class="rest__var">Любой</p>
+                                    <div class="search__tur" id="droprest">
+                                        <label><input type="radio" name="restType" value="Любой" checked>Любой</label>
+                                        <label><input type="radio" name="restType" value="Пляжный">Пляжный</label>
+                                        <label><input type="radio" name="restType"
+                                                value="Горнолыжный">Горнолыжный</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search-turs__var">
+                                <img src="./assets/img/airplane.svg" alt="">
+                                <div class="search-turs__var__func tour__operator" onclick="toggleDropdownAir()">
+                                    <p>Туроператоры</p>
+                                    <p id="air__value">Туроператоры</p>
+                                    <div class="search__air" id="dropair">
+                                        <label><input class="search__check" type="radio" name="air"
+                                                onchange="updateSelectionAir()"> Все</label>
+                                        <label><input class="search__check" type="radio" name="air"
+                                                onchange="updateSelectionAir()"> Вариант 1</label>
+                                        <label><input class="search__check" type="radio" name="air"
+                                                onchange="updateSelectionAir()"> Вариант 2</label>
+                                        <label><input class="search__check" type="radio" name="air"
+                                                onchange="updateSelectionAir()"> Вариант 3</label>
+                                        <label><input class="search__check" type="radio" name="air"
+                                                onchange="updateSelectionAir()"> Вариант 4</label>
+                                        <label><input class="search__check" type="radio" name="air"
+                                                onchange="updateSelectionAir()"> Вариант 5</label>
+                                        <label><input class="search__check" type="radio" name="air"
+                                                onchange="updateSelectionAir()"> Вариант 6</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="search__chart">
+                                <input type="range" id="charterFlightRange" min="0" max="1" step="1" value="0">
+                                <label for="charterFlightRange">Только чартерный перелет</label>
+                            </div>
+                        </div>
+
+                        <div class="search__func">
+                            <div class="search-turs__func">
+                                <img src="./assets/img/filter_vector.svg" alt="">
+                                <button id="show__search" class="search-turs__more-filt">Еще фильтры</button>
+                            </div>
+                            <button class="btn  btn--big" type="submit">Найти туры</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page__section-padding-s offer">
+                <div class="container">
+                    <div class="offer__best">
+                        <img class="offer__best-img" src="assets/img/offer/card.png" alt="">
+                        <div class="offer__content">
+                            <div class="offer__headline">Получите лучшие предложения за 2 минуты</div>
+                            <div class="offer__subheadline">Сэкономьте время на поиск</div>
+                        </div>
+                    </div>
+
+                    <div class="offer__bottom">
+                        <input class="offer__btn btn btn--white" type="text" id="phoneInput"
+                            placeholder="+7 (___) ___ __ __">
+                        <a class="offer__btn  btn" href="#">ПРЕДЛОЖИТЬ МНЕ </a>
+                    </div>
+
+                    <div class="offer__image">
+                        <img class="offer__img" src="https://via.placeholder.com/330x80" alt="">
+                        <img class="offer__img" src="https://via.placeholder.com/330x80" alt="">
+                        <img class="offer__img" src="https://via.placeholder.com/330x80" alt="">
+                        <img class="offer__img" src="https://via.placeholder.com/330x80" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <section class="page__section-padding-s  tour">
+                <div class="container">
+                    <div class="tour__title__container">
+                        <h2 class="section-title tour__title"> <span>Горящие туры</span> с вылетом</h2>
+                        <p class="tour__title__item">выгода до -40%</p>
+                    </div>
+
+                    <div class="tour__filters">
+                        <select class="tour__filters__item">
+                            <option value="">Страна</option>
+                            <option value="">Египет</option>
+                            <option value="">ОАЭ</option>
+                            <option value="">Турция</option>
+                        </select>
+                        <select class="tour__filters__item">
+                            <option value="">Курорт</option>
+                            <option value="">Египет</option>
+                            <option value="">ОАЭ</option>
+                            <option value="">Турция</option>
+                        </select>
+                        <select class="tour__filters__item">
+                            <option value="">Бюджет</option>
+                            <option value="">Меньше 10 000тг</option>
+                            <option value="">10 000тг - 100 000тг</option>
+                            <option value="">от 100 000тг</option>
+                        </select>
+                        <select class="tour__filters__item">
+                            <option value="">Кол-во звезд</option>
+                            <option value="">1 звезда</option>
+                            <option value="">2 здезды</option>
+                            <option value="">3 здезды</option>
+                            <option value="">4 здезды</option>
+                            <option value="">5 звёзд</option>
+                        </select>
+                        <select class="tour__filters__item">
+                            <option value="">Кол-во ночей</option>
+                            <option value="">1-2 ночей</option>
+                            <option value="">3-4 ночей</option>
+                            <option value="">4-8 ночей</option>
+                            <option value="">8-14 ночей</option>
+                            <option value="">от 15 ночей</option>
+                        </select>
+                        <select class="tour__filters__item">
+                            <option value="">Питание</option>
+                            <option value="">Любое</option>
+                            <option value="">Завтрак</option>
+                            <option value="">Полупансион</option>
+                            <option value="">Полный пансион</option>
+                            <option value="">Все включено</option>
+                            <option value="">Без питания</option>
+
+                        </select>
+                    </div>
+
+                    <div class="tour__condition">
+                        <div class="tour__head">Включено:</div>
+
+                        <div class="tour__items">
+                            <div class="tour__item">
+                                <img class="tour__icon" src="./assets/img/tour/plan.svg" alt="">
+                                <div class="tour__description">Перелет</div>
+                            </div>
+                            <div class="tour__item">
+                                <img class="tour__icon" src="./assets/img/tour__trans.svg" alt="">
+                                <div class="tour__description">Трансфер</div>
+                            </div>
+                            <div class="tour__item">
+                                <img class="tour__icon" src="./assets/img/tour/eat.svg" alt="">
+                                <div class="tour__description">Питание</div>
+                            </div>
+                            <div class="tour__item">
+                                <img class="tour__icon" src="./assets/img/tour/homes.svg" alt="">
+                                <div class="tour__description">Проживание</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour__inner">
+                        <div class="tour__inner__filter">
+                            <img src="./assets/img/filter_vector.svg" alt="">
+                            <p>Сортировка по ценам</p>
+                        </div>
+                        <div class="tour__card">
+                            <div class="tour__image">
+                                <img class="tour__img" src="https://via.placeholder.com/93x97" alt="antro">
+                            </div>
+
+                            <div class="tour__info">
+                                <div class="tour__content">
+                                    <div class="tour__order">
+                                        <div class="tour__name">Rios Magawish 4*</div>
+                                        <div class="tour__address">Турция, Сиде</div>
+                                    </div>
+
+                                    <div class="tour__stars">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star-empty.svg" width="8" height="8" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="tour__group">
+                                    <div class="tour__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="speacila__night">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="tour__price">
+                                        <div class="tour__price-old">367 435 тг</div>
+                                        <div class="tour__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour__card">
+                            <div class="tour__image">
+                                <img class="tour__img" src="https://via.placeholder.com/93x97" alt="antro">
+                            </div>
+
+                            <div class="tour__info">
+                                <div class="tour__content">
+                                    <div class="tour__order">
+                                        <div class="tour__name">Rios Magawish 4*</div>
+                                        <div class="tour__address">Турция, Сиде</div>
+                                    </div>
+
+                                    <div class="tour__stars">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star-empty.svg" width="8" height="8" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="tour__group">
+                                    <div class="tour__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="speacila__night">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="tour__price">
+                                        <div class="tour__price-old">367 435 тг</div>
+                                        <div class="tour__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour__card">
+                            <div class="tour__image">
+                                <img class="tour__img" src="https://via.placeholder.com/93x97" alt="antro">
+                            </div>
+
+                            <div class="tour__info">
+                                <div class="tour__content">
+                                    <div class="tour__order">
+                                        <div class="tour__name">Rios Magawish 4*</div>
+                                        <div class="tour__address">Турция, Сиде</div>
+                                    </div>
+
+                                    <div class="tour__stars">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star-empty.svg" width="8" height="8" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="tour__group">
+                                    <div class="tour__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="speacila__night">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="tour__price">
+                                        <div class="tour__price-old">367 435 тг</div>
+                                        <div class="tour__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour__card">
+                            <div class="tour__image">
+                                <img class="tour__img" src="https://via.placeholder.com/93x97" alt="antro">
+                            </div>
+
+                            <div class="tour__info">
+                                <div class="tour__content">
+                                    <div class="tour__order">
+                                        <div class="tour__name">Rios Magawish 4*</div>
+                                        <div class="tour__address">Турция, Сиде</div>
+                                    </div>
+
+                                    <div class="tour__stars">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star.svg" width="8" height="8" alt="">
+                                        <img src="./assets/img/tour/Star-empty.svg" width="8" height="8" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="tour__group">
+                                    <div class="tour__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="speacila__night">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="tour__price">
+                                        <div class="tour__price-old">367 435 тг</div>
+                                        <div class="tour__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tour__button">
+                            <button>Смотреть ещё</button>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="page__section-padding-s  special">
+                <div class="container">
+                    <h2 class="section-title special__title"><span>Спец предложения</span> от отелей</h2>
+
+                    <div class="special__inner">
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+                                <div class="special__time">21 раз</div>
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+                                <div class="special__time">21 раз</div>
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+                                <div class="special__time">21 раз</div>
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+                                <div class="special__time">21 раз</div>
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="special__card">
+                            <div class="special__image">
+                                <img class="special__img" src="https://via.placeholder.com/330x140" alt="antro">
+                                <div class="special__time">21 раз</div>
+                            </div>
+
+                            <div class="special__info">
+                                <div class="special__content">
+                                    <div class="special__stars">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star.svg" alt="">
+                                        <img src="assets/img/special/Star-empty.svg" alt="">
+                                    </div>
+
+                                    <div class="special__name">Rios Magawish 4*</div>
+                                    <div class="special__address">Турция, Сиде</div>
+                                </div>
+
+                                <div class="special__group">
+                                    <div class="special__date">
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/cal.svg" alt="">
+                                            24.04.2023
+                                        </div>
+                                        <div class="tour__num">
+                                            <img src="./assets/img/tour/moon.svg" alt="">
+                                            7 ночей
+                                        </div>
+                                    </div>
+
+                                    <div class="special__price">
+                                        <div class="special__price-old">367 435 тг</div>
+                                        <div class="special__price-new">290 783 тг</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page__section  direction">
+                <div class="container">
+
+                    <h2 class="direction__title  section-title"><span>ПОПУЛЯРНЫЕ</span> НАПРАВЛЕНИЯ</h2>
+
+                    <div class="direction__inner">
+
+                        <div class="direction__item">
+
+                            <div class="direction__img">
+                                <img src="https://via.placeholder.com/330x70" alt="" class="direction__image">
+                                <div class="direction__headline">
+                                    ОАЭ
+                                </div>
+                                <div class="direction__price">
+                                    от 119 150 тг
+                                </div>
+                            </div>
+
+                            <div class="direction__info">
+                                <div class="direction__text">
+                                    Дубай | Абу Даби, Аль Айн | ФуджейраШарджа | Аджман | Рас Аль Хайм
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="direction__item">
+
+                            <div class="direction__img">
+                                <img src="https://via.placeholder.com/330x70" alt="" class="direction__image">
+                                <div class="direction__headline">
+                                    ОАЭ
+                                </div>
+                                <div class="direction__price">
+                                    от 119 150 тг
+                                </div>
+                            </div>
+
+                            <div class="direction__info">
+                                <div class="direction__text">
+                                    Дубай | Абу Даби, Аль Айн | ФуджейраШарджа | Аджман | Рас Аль Хайм
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="direction__item">
+
+                            <div class="direction__img">
+                                <img src="https://via.placeholder.com/330x70" alt="" class="direction__image">
+                                <div class="direction__headline">
+                                    ОАЭ
+                                </div>
+                                <div class="direction__price">
+                                    от 119 150 тг
+                                </div>
+                            </div>
+
+                            <div class="direction__info">
+                                <div class="direction__text">
+                                    Дубай | Абу Даби, Аль Айн | ФуджейраШарджа | Аджман | Рас Аль Хайм
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="page__section  more">
+
+                <div class="container">
+
+                    <div class="more__header">
+
+                        <div class="more__sub-title">А так же часто ищут</div>
+
+                    </div>
+
+                    <div class="more__items">
+
+                        <div class="more__item">
+                            <img class="more__img" src="https://via.placeholder.com/110x55" alt="">
+
+                            <div class="more__info">
+
+                                <div class="more__name">Мальдивы</div>
+                                <div class="more__price">от 290 783 тг</div>
+
+                            </div>
+                        </div>
+
+                        <div class="more__item">
+                            <img class="more__img" src="https://via.placeholder.com/110x55" alt="">
+
+                            <div class="more__info">
+
+                                <div class="more__name">Мальдивы</div>
+                                <div class="more__price">от 290 783 тг</div>
+
+                            </div>
+                        </div>
+
+                        <div class="more__item">
+                            <img class="more__img" src="https://via.placeholder.com/110x55" alt="">
+
+                            <div class="more__info">
+
+                                <div class="more__name">Мальдивы</div>
+                                <div class="more__price">от 290 783 тг</div>
+
+                            </div>
+                        </div>
+
+                        <div class="more__item">
+                            <img class="more__img" src="https://via.placeholder.com/110x55" alt="">
+
+                            <div class="more__info">
+
+                                <div class="more__name">Мальдивы</div>
+                                <div class="more__price">от 290 783 тг</div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="more__button">
+                        Все направления
+                    </button>
+                </div>
+            </section>
+
+            <section class="page__section famous">
+                <div class="container">
+                    <h2 class="section-title famous__title"><span>Популярные</span> курорты</h2>
+                    <div class="famous__slider__container">
+                        <div class="famous__slider">
+                            <div class="famous__item">
+                                <img src="./assets/img/famous/item__1.svg" alt="">
+                                <h3 class="famous__name"><a href="./tour__country.html">
+                                        Шамр-эль-
+                                        Шейх
+                                    </a></h3>
+                                <p class="famous__country">Египет</p>
+                                <p class="famous__price">> 176 833</p>
+                            </div>
+                            <div class="famous__item">
+                                <img src="./assets/img/famous/item__2.svg" alt="">
+                                <h3 class="famous__name"><a href="./tour__country.html">Дубай</a></h3>
+                                <p class="famous__country">ОАЭ</p>
+                                <p class="famous__price">> 133 126</p>
+                            </div>
+                            <div class="famous__item">
+                                <img src="./assets/img/famous/item__3.svg" alt="">
+                                <h3 class="famous__name"><a href="./tour__country.html">Паттайя</a></h3>
+                                <p class="famous__country">Тайланд</p>
+                                <p class="famous__price">> 306 000</p>
+                            </div>
+                            <div class="famous__item">
+                                <img src="./assets/img/famous/item__1.svg" alt="">
+                                <h3 class="famous__name"><a href="./tour__country.html">
+                                        Шамр-эль-
+                                        Шейх
+                                    </a></h3>
+                                <p class="famous__country">Египет</p>
+                                <p class="famous__price">> 176 833</p>
+                            </div>
+                            <div class="famous__item">
+                                <img src="./assets/img/famous/item__2.svg" alt="">
+                                <h3 class="famous__name"><a href="./tour__country.html">Паттайя</a></h3>
+                                <p class="famous__country">Египет</p>
+                                <p class="famous__price">> 176 833</p>
+                            </div>
+                            <div class="famous__item">
+                                <img src="./assets/img/famous/item__3.svg" alt="">
+                                <h3 class="famous__name"><a href="./tour__country.html">Дубай</a></h3>
+                                <p class="famous__country">Египет</p>
+                                <p class="famous__price">> 176 833</p>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-line"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="page__section-padding-s  support">
+                <div class="container">
+                    <h2 class="section-title famous__title">Поможем огранизовать <span>любой отдых</span></h2>
+
+                    <div class="support__inner">
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+
+                        <div class="support__item">
+                            <div class="support__img">
+                                <img src="https://via.placeholder.com/155x134" alt="">
+                            </div>
+                            <div class="support__info">
+                                <div class="support__name">Горнолыжные туры</div>
+                                <div class="support__text">Катайтесь на лыжах впрекрасных горах</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page__section-padding-s about">
+
+                <div class="container">
+
+                    <h2 class="about__title  section-title">
+                        <span class="text-orange">ПОЧЕМУ 99% ВОЗВРАЩАЮТСЯ В "КАЙФТУР"</span> - О НАС
+                    </h2>
+
+
+                    <div class="about__slider">
+                        <div>
+                            <div class="about__item  slider-about">
+                                <div class="slider-about__item">
+                                    <img class="slider-about__img" src="https://via.placeholder.com/330x140" alt="">
+                                </div>
+                            </div>
+                            <div class="about__text">
+                                <p>
+                                    "КАЙФТУР" - это 10 000 000 туров оттуропараторов. Постоянно обнов-ляемая база лучших
+                                    предложений. Более 100 000 отелей на любой вкус и кошелек.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="about__item  slider-about">
+                                <div class="slider-about__item">
+                                    <img class="slider-about__img" src="https://via.placeholder.com/330x140" alt="">
+                                </div>
+                            </div>
+                            <div class="about__text">
+                                <p>
+                                    "КАЙФТУР" - это 10 000 000 туров оттуропараторов. Постоянно обнов-ляемая база лучших
+                                    предложений. Более 100 000 отелей на любой вкус и кошелек.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="about__item  slider-about">
+                                <div class="slider-about__item">
+                                    <img class="slider-about__img" src="https://via.placeholder.com/330x140" alt="">
+                                </div>
+                            </div>
+                            <div class="about__text">
+                                <p>
+                                    "КАЙФТУР" - это 10 000 000 туров оттуропараторов. Постоянно обнов-ляемая база лучших
+                                    предложений. Более 100 000 отелей на любой вкус и кошелек.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about__inner">
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector.svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector (1).svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector (2).svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector (3).svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector (4).svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector (5).svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector (6).svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                        <div class="about__item">
+                            <img src="assets/img/about/Vector (7).svg" alt="" class="about__icon">
+                            <div class="about__info">
+                                Лучшие цены и путевки на любой
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </section>
+
+            <section class="page__section-padding-s  reviews">
+                <div class="reviews__container container">
+                    <h2 class="reviews__title  section-title">
+                        <span class="text-orange">Отзывы о</span> "КАЙФТУР"
+                    </h2>
+                </div>
+
+                <div class="reviews__slider">
+                    <div class="reviews__slider__item">
+                        <div class="reviews__sliders  slider-reviews">
+                            <div class="slider-reviews__item">
+                                <img class="slider-reviews__img" src="https://via.placeholder.com/330x140" alt="">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="reviews__inner">
+                                <div class="reviews__item">
+                                    <div class="reviews__headline">ОТЗЫВЫ</div>
+                                    <div class="reviews__text">
+                                        Большое спасибо КАЙФТУР за хороший отдых в ГОА. Мы побивали словно в Раю. Читые
+                                        пляжи,
+                                        офигенное Аравийское море, приветливые люди. Обязательно в след поездку
+                                        обратимся в
+                                        КАЙФТУР
+                                    </div>
+                                    <div class="reviews__box">
+                                        <div class="reviews__client">
+                                            <div class="reviews__img">
+                                                <img class="reviews__photo" src="assets/img/reviews/Ellipse 52.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="reviews__content">
+                                                <h4 class="reviews__name">Айжан</h4>
+                                                <span class="reviews__date">02.12.22</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__slider__item">
+                        <div class="reviews__sliders  slider-reviews">
+                            <div class="slider-reviews__item">
+                                <img class="slider-reviews__img" src="https://via.placeholder.com/330x140" alt="">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="reviews__inner">
+                                <div class="reviews__item">
+                                    <div class="reviews__headline">ОТЗЫВЫ</div>
+                                    <div class="reviews__text">
+                                        Большое спасибо КАЙФТУР за хороший отдых в ГОА. Мы побивали словно в Раю. Читые
+                                        пляжи,
+                                        офигенное Аравийское море, приветливые люди. Обязательно в след поездку
+                                        обратимся в
+                                        КАЙФТУР
+                                    </div>
+                                    <div class="reviews__box">
+                                        <div class="reviews__client">
+                                            <div class="reviews__img">
+                                                <img class="reviews__photo" src="assets/img/reviews/Ellipse 52.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="reviews__content">
+                                                <h4 class="reviews__name">Айжан</h4>
+                                                <span class="reviews__date">02.12.22</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reviews__slider__item">
+                        <div class="reviews__sliders  slider-reviews">
+                            <div class="slider-reviews__item">
+                                <img class="slider-reviews__img" src="https://via.placeholder.com/330x140" alt="">
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="reviews__inner">
+                                <div class="reviews__item">
+                                    <div class="reviews__headline">ОТЗЫВЫ</div>
+                                    <div class="reviews__text">
+                                        Большое спасибо КАЙФТУР за хороший отдых в ГОА. Мы побивали словно в Раю. Читые
+                                        пляжи,
+                                        офигенное Аравийское море, приветливые люди. Обязательно в след поездку
+                                        обратимся в
+                                        КАЙФТУР
+                                    </div>
+                                    <div class="reviews__box">
+                                        <div class="reviews__client">
+                                            <div class="reviews__img">
+                                                <img class="reviews__photo" src="assets/img/reviews/Ellipse 52.png"
+                                                    alt="">
+                                            </div>
+                                            <div class="reviews__content">
+                                                <h4 class="reviews__name">Айжан</h4>
+                                                <span class="reviews__date">02.12.22</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__bottom">
+                    <a class="reviews__btn  btn" href="#">Все отзывы</a>
+                </div>
+            </section>
+
+            <div class="page__section-padding-s  push-contact">
+                <div class="container">
+
+                    <div class="push-contact__inner">
+                        <div class="push-contact__header">
+                            <h4 class="push-contact__title">НЕ МОЖЕШЬ ОПРЕДЕЛИТСЯ
+                                С ТУРОМ?</h4>
+                            <div class="push-contact__sub-title">Оставьте заявку и мы вам поможем</div>
+                        </div>
+
+
+                        <input class="push-contact__input" type="text" id="phoneInput1"
+                            placeholder="+7 (___) ___ __ __">
+                        <button class="push-contact__btn  btn  btn--border">Жду звонка</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+
+                <div class="footer__inner">
+                    <div class="copyright">
+                        &#169; 2023 "КАЙФТУР" Все права защищены законодательством РК. ТОО "...". БИН 123456789012
+                    </div>
+                    <div class="footer__contact">
+                        
+
+                        <div class="footer__group">
+                            <a class="footer__contact-link  footer__contact-link--bold" href="tel:+77073366665">
+                                <span class="text-mid">+7 (707) 336-66-65</span>
+                            </a>
+                            <a class="footer__contact-link" href="mailto:info@lakuhni.kz">info@lakuhni.kz</a>
+                        </div>
+                    </div>
+                    <div class="footer__list">
+                        <ul>О нас
+                            <li><a href="#">СМИ о нас</a></li>
+                            <li><a href="#">Награды</a> </li>
+                            <li><a href="#">Команда</a> </li>
+                            <li><a href="#">Вакансии</a> </li>
+                            <li><a href="#">Партнеры</a> </li>
+                            <li><a href="#">FAQ</a> </li>
+                            <li><a href="#">Карта сайта</a></li>
+                        </ul>
+                        <ul>Туристам
+                            <li><a href="#">Способы оплаты</a></li>
+                            <li><a href="#">Туры в кредит</a></li>
+                            <li><a href="#">Страхование</a></li>
+                            <li><a href="#">Подарочные сертификаты</a></li>
+                            <li><a href="#">Бонусная программа</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="./assets/js/libs/jquery-3.6.3.min.js"></script>
+        <script src="./assets/js/libs/slick.min.js"></script>
+        <script src="./assets/js/libs/nouislider.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/nouiinput.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    </div>
+</body>
+
+</html>
