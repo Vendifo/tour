@@ -16,4 +16,21 @@ document.addEventListener("DOMContentLoaded", function () {
         var nightsValue = values.map(Math.round); // Округляем значения ползунков
         nightsElement.textContent = nightsValue.join('-') + ' ночей';
     });
+
+    var rangeSliderPrice = document.getElementById('rangeSliderPrice');
+    var priceElement = document.getElementById('priceCountVar');
+
+    noUiSlider.create(rangeSliderPrice,{
+        start: [30000, 500000],
+        connect: true,
+        range: {
+            'min':0,
+            'max': 5000000
+        }
+    });
+
+    rangeSliderPrice.noUiSlider.on('update', function (values, handle) {
+        var priceValue = values.map(Math.round); // Округляем значения ползунков
+        priceElement.textContent = priceValue.join('-') + ' тг';
+    });
 });

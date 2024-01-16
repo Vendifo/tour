@@ -10,72 +10,6 @@ function togglePeople() {
     closePeopleMenu.classList.toggle('active');
 }
 
-function togglePrice() {
-    var priceDrop = document.getElementById('priceDrop');
-
-    // Добавляем или убираем класс active
-    priceDrop.classList.toggle('active');
-
-    // Проверяем, есть ли у блока класс active
-    var isActive = priceDrop.classList.contains('active');
-
-    // Если класс active есть, создаем checkbox'ы
-    updateSelectedPrices();
-}
-
-function createPriceCheckboxes() {
-    var priceDrop = document.getElementById('priceDrop');
-
-    // Убираем все дочерние элементы перед созданием новых
-    priceDrop.innerHTML = '';
-
-    // Массив с ценами (в тг)
-    var prices = [5000, 10000, 20000, 30000, 50000, 100000, 200000];
-
-    // Создаем div для каждой пары input и label и добавляем их в блок priceDrop
-    prices.forEach(function (price) {
-        var checkboxDiv = document.createElement('div');
-
-        var checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.value = price;
-        checkbox.id = 'priceCheckbox' + price; // Уникальный ID для каждого checkbox
-
-        var label = document.createElement('label');
-        label.textContent = price + ' тг';
-        label.htmlFor = 'priceCheckbox' + price;
-
-        checkboxDiv.appendChild(checkbox);
-        checkboxDiv.appendChild(label);
-        priceDrop.appendChild(checkboxDiv);
-
-        // Добавляем слушатель события на изменение состояния checkbox
-        checkbox.addEventListener('change', updateSelectedPrices);
-    });
-}
-
-function updateSelectedPrices() {
-    var priceCheckboxes = document.querySelectorAll('#priceDrop input[type="checkbox"]:checked');
-    var selectedPricesCount = priceCheckboxes.length;
-
-    // Update the <p> element with the selected prices count
-    var pElement = document.getElementById('selectedPricesCount');
-    pElement.textContent = selectedPricesCount + ' категорий выбрано';
-}
-
-var closePriceMenu = document.getElementById('closePriceMenu');
-closePriceMenu.addEventListener('click', function() { 
-    var priceDrop = document.getElementById('priceDrop');
-
-    // Добавляем или убираем класс active
-    priceDrop.classList.toggle('active');
-
-    // Проверяем, есть ли у блока класс active
-    var isActive = priceDrop.classList.contains('active');
-
-    // Если класс active есть, создаем checkbox'ы
-    updateSelectedPrices();
-});
 
 function updateStarCount(checkbox) {
     var starCountElement = document.getElementById('muchStar');
@@ -122,10 +56,6 @@ function toggleDropdown() {
     dropdown.classList.toggle('active');
 }
 
-function toggleDropdownRest() {
-    var dropdown = document.getElementById('droprest');
-    dropdown.classList.toggle('active');
-}
 
 
 
@@ -161,25 +91,7 @@ function updateSelection() {
 
 var selectedCount = 0;
 
-function updateSelectionAir() {
-    var pElement = document.getElementById('air__value');
-    var selectedRadio = document.querySelector('#dropair input[name="air"]:checked');
 
-    if (pElement && selectedRadio) {
-        pElement.textContent = selectedRadio.parentElement.textContent.trim();
-    } else if (pElement) {
-        pElement.textContent = 'Туроператоры';
-    }
-
-    var dropdown = document.getElementById('dropair');
-    dropdown.classList.remove('active');
-}
-
-
-function toggleDropdownAir() {
-    var dropdown = document.getElementById('dropair');
-    dropdown.classList.toggle('active');
-}
 // Закрываем список при клике в любое место документа
 document.addEventListener('click', function (event) {
     var dropdown = document.getElementById('dropdown');
@@ -197,12 +109,7 @@ document.addEventListener('click', function (event) {
             dropdown.classList.remove('active');
         }
     }
-    var isClickInsideMenu = priceDrop.contains(event.target) || priceToggle.contains(event.target);
-
-
-    if (!isClickInsideMenu) {
-        priceDrop.classList.remove('active');
-    }
+    
 
     var listStar = document.getElementById('starCheckboxes');
     var starCountElement = document.getElementById('muchStar');
@@ -216,28 +123,10 @@ document.addEventListener('click', function (event) {
         listStar.classList.remove('active');
     }
 
-    var tourOperator = document.querySelector('.tour__operator');
-    var dropair = document.getElementById('dropair');
-
-    var isClickInsideMenu2 = tourOperator.contains(event.target) || dropair.contains(event.target);
-
-    if (!isClickInsideMenu2) {
-        dropair.classList.remove('active');
-    }
+    
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var restTypeRadios = document.getElementsByName('restType');
-    var restVarElement = document.querySelector('.rest__var');
-    var dropdown = document.getElementById('droprest');
 
-    restTypeRadios.forEach(function (radio) {
-        radio.addEventListener('change', function () {
-            restVarElement.textContent = this.value.charAt(0).toUpperCase() + this.value.slice(1);
-            dropdown.classList.remove('active');
-        });
-    });
-});
 
 
 document.addEventListener("DOMContentLoaded", function () {

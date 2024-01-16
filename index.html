@@ -154,42 +154,12 @@
                         <div class="search-turs__hide">
                             <div class="search-turs__var gotPrice">
                                 <img src="./assets/img/wallet2.svg" alt="">
-                                <div class="search-turs__var__func" id="priceToggle">
-                                    <p onclick="togglePrice()">Цена</p>
-                                    <p id="selectedPricesCount" onclick="togglePrice()">Указать цену</p>
-                                    <div class="search__price" id="priceDrop">
-                                        <div class="search__price__item">
-                                            <div>
-                                                <input type="checkbox" id="priceCheckbox5000" value="5000">
-                                                <label for="priceCheckbox5000">5000 тг</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="priceCheckbox10000" value="5000">
-                                                <label for="priceCheckbox10000">10000 тг</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="priceCheckbox20000" value="5000">
-                                                <label for="priceCheckbox20000">20000 тг</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="priceCheckbox30000" value="5000">
-                                                <label for="priceCheckbox30000">30000 тг</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="priceCheckbox50000" value="5000">
-                                                <label for="priceCheckbox50000">50000 тг</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="priceCheckbox100000" value="5000">
-                                                <label for="priceCheckbox100000">100000 тг</label>
-                                            </div>
-                                            <div>
-                                                <input type="checkbox" id="priceCheckboxMore" value="5000">
-                                                <label for="priceCheckboxMore">>100000 тг</label>
-                                            </div>
-                                        </div>
-                                        <p id="closePriceMenu">&#10006;</p>
+                                <div class="search-turs__var__func search-turs__price" id="priceToggle">
+                                    <div class="search-turs__var__func__text">
+                                        <p onclick="togglePrice()">Цена</p>
+                                        <p id="priceCountVar">Выберите</p>
                                     </div>
+                                    <div id="rangeSliderPrice"></div>
                                 </div>
 
                             </div>
@@ -247,42 +217,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="search-turs__var" onclick="toggleDropdownRest()">
-                                <img src="./assets/img/palm.svg" alt="">
-                                <div class="search-turs__var__func">
-                                    <p>Тип отдыха</p>
-                                    <p class="rest__var">Любой</p>
-                                    <div class="search__tur" id="droprest">
-                                        <label><input type="radio" name="restType" value="Любой" checked>Любой</label>
-                                        <label><input type="radio" name="restType" value="Пляжный">Пляжный</label>
-                                        <label><input type="radio" name="restType"
-                                                value="Горнолыжный">Горнолыжный</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="search-turs__var">
-                                <img src="./assets/img/airplane.svg" alt="">
-                                <div class="search-turs__var__func tour__operator" onclick="toggleDropdownAir()">
-                                    <p>Туроператоры</p>
-                                    <p id="air__value">Туроператоры</p>
-                                    <div class="search__air" id="dropair">
-                                        <label><input class="search__check" type="radio" name="air"
-                                                onchange="updateSelectionAir()"> Все</label>
-                                        <label><input class="search__check" type="radio" name="air"
-                                                onchange="updateSelectionAir()"> Вариант 1</label>
-                                        <label><input class="search__check" type="radio" name="air"
-                                                onchange="updateSelectionAir()"> Вариант 2</label>
-                                        <label><input class="search__check" type="radio" name="air"
-                                                onchange="updateSelectionAir()"> Вариант 3</label>
-                                        <label><input class="search__check" type="radio" name="air"
-                                                onchange="updateSelectionAir()"> Вариант 4</label>
-                                        <label><input class="search__check" type="radio" name="air"
-                                                onchange="updateSelectionAir()"> Вариант 5</label>
-                                        <label><input class="search__check" type="radio" name="air"
-                                                onchange="updateSelectionAir()"> Вариант 6</label>
-                                    </div>
-                                </div>
-                            </div>
+                            
+                            
                             <div class="search__chart">
                                 <input type="range" id="charterFlightRange" min="0" max="1" step="1" value="0">
                                 <label for="charterFlightRange">Только чартерный перелет</label>
